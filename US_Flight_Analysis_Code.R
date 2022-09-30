@@ -87,20 +87,20 @@ flights_df <- flights_df %>%
            
 flights_df$degree_delay[1:10]
 
-# inefficient !!!!!!
+# inefficient !!!
 #######################################################
-vec <- c()                                            #
-for (t in flights_df$total_delay) {                   #
-  if (t <= 15) {                                      #
-    vec <- append(vec, "No delay")                    #
-}                                                     #
-  if (t >= 45) {                                      #
-    vec <- append(vec, "Large delay")                 #
-  }                                                   #
-  else {                                              #
-    vec <- append(vec, "Medium delay")                #
-  }                                                   #
-}                                                     #
+#vec <- c()                                            #
+#for (t in flights_df$total_delay) {                   #
+#  if (t <= 15) {                                      #
+#    vec <- append(vec, "No delay")                    #
+#}                                                     #
+#  if (t >= 45) {                                      #
+#    vec <- append(vec, "Large delay")                 #
+#  }                                                   #
+#  else {                                              #
+#    vec <- append(vec, "Medium delay")                #
+#  }                                                   #
+#}                                                     #
 #######################################################
 #flights_df["delay_degree"] <- vec
 
@@ -111,19 +111,20 @@ flights_df <- flights_df %>%
 
 flights_df$compensation[1:10]
 
+# inefficient !!!
 #################################################
-vect <- c()                                     # 
-for (c in flights_df$total_delay){              #
-  if (c < 180){                                 #
-    vect <- append(vect, "no compensation")     #
-  }                                             #
-  if (c >= 300){                                #
-    vect <- append(vect, "full refund")         #
-  }                                             #
-  else {                                        #
-    vect <- append(vect, "up to 600€")          #
-  }                                             #
-}                                               #
+#vect <- c()                                     # 
+#for (c in flights_df$total_delay){              #
+#  if (c < 180){                                 #
+#    vect <- append(vect, "no compensation")     #
+#  }                                             #
+#  if (c >= 300){                                #
+#    vect <- append(vect, "full refund")         #
+#  }                                             #
+#  else {                                        #
+#    vect <- append(vect, "up to 600€")          #
+#  }                                             #
+#}                                               #
 #################################################
 #flights_df["compensation"] <- vect
 
